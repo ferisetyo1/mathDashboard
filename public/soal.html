@@ -1,0 +1,84 @@
+<div class="row" id="soal-content">
+    <div class="col-md-4">
+        <div class="card card-default" style="padding: 8px;">
+            <h1>Input Soal</h1>
+            <form id="addSoal" method="POST" action="">
+                <div class="form-group">
+                    <label for="tipe_soal">Tipe Soal</label>
+                    <select class="form-control custom-select" id="tipe_soal" name="tipe" required>
+                        <option selected disabled>Pilih materi</option>
+                        <option value="1">Latihan</option>
+                        <option value="2">Quizz</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input_pertanyaan">Pertanyaan</label>
+                    <textarea rows="4" type="text" class="form-control" id="input_pertanyaan" name="pertanyaan"
+                        placeholder="ex: apakah ini segitiga?" form="addSoal" required></textarea>
+                </div>
+                <h5>Jawaban Opsional</h5>
+                <div class="form-group">
+                    <label for="jawaban_benar">Jawaban Benar</label>
+                    <select class="form-control custom-select" id="jawaban_benar" name="jawaban_benar" required>
+                        <option selected disabled>Pilih jawaban</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">E</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="opsi_a">opsi a</label>
+                    <input type="text" class="form-control" id="opsi_a" placeholder="ex: ya" name="opsi_a" required>
+                </div>
+                <div class="form-group">
+                    <label for="opsi_b">opsi b</label>
+                    <input type="text" class="form-control" id="opsi_b" placeholder="ex: tidak" name="opsi_b" required>
+                </div>
+                <div class="form-group">
+                    <label for="opsi_c">opsi c</label>
+                    <input type="text" class="form-control" id="opsi_c" placeholder="ex: mungkin" name="opsi_c"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="opsi_d">opsi d</label>
+                    <input type="text" class="form-control" id="opsi_d" placeholder="ex: bisa jadi" name="opsi_d"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="opsi_e">opsi e</label>
+                    <input type="text" class="form-control" id="opsi_e" placeholder="ex: mustahil" name="opsi_e"
+                        required>
+                </div>
+                <button type="button" class="btn btn-primary" id="submitSoal">Submit Soal</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card card-default" style="padding: 8px;">
+            <h1>Data Soal</h1>
+            <div class="table-responsive">
+                <table id="dataSoal" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>ID Soal</th>
+                            <th>Tipe Soal</th>
+                            <th>Pertanyaan</th>
+                            <th>Jawaban benar</th>
+                            <th>Jawaban Opsi A</th>
+                            <th>Jawaban Opsi B</th>
+                            <th>Jawaban Opsi C</th>
+                            <th>Jawaban Opsi D</th>
+                            <th>Jawaban Opsi E</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
